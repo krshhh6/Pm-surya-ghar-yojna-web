@@ -1,0 +1,6 @@
+{
+  "name": "New Aqua Solar App",
+  "description": "New Aqua Home Appliances - Patna's premium authorized solar rooftop partner under the PM Surya Ghar Muft Bijli Yojana scheme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
