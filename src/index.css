@@ -3,6 +3,20 @@
 @theme {
   --color-sun-yellow: #FFE63B;
   --font-sans: "Inter", sans-serif;
+  --animate-sheen: sheen 1.6s ease-in-out infinite;
+
+  @keyframes sheen {
+    0% { transform: translateX(-150%) skewX(-15deg); }
+    100% { transform: translateX(250%) skewX(-15deg); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 1.5rem;
 }
 
 body {

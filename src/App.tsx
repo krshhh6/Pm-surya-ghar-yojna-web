@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AnimatedHeading from './components/AnimatedHeading';
 import FadeIn from './components/FadeIn';
+import ScrollReveal from './components/ScrollReveal';
 import BatteryCard from './components/BatteryCard';
 import WeatherCard from './components/WeatherCard';
 import ReviewCard from './components/ReviewCard';
@@ -10,6 +11,7 @@ import ModelExplorer from './components/ModelExplorer';
 import CallbackModal from './components/CallbackModal';
 import DeveloperProfileModal from './components/DeveloperProfileModal';
 import SubsidyMatrix from './components/SubsidyMatrix';
+import ScrollProgressBar from './components/ScrollProgressBar';
 import { ArrowRight, Sliders, Zap, Award, ShieldAlert, Sparkles, PhoneCall, MessageCircle, MessageSquare, MapPin } from 'lucide-react';
 
 export default function App() {
@@ -38,6 +40,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen w-full text-white bg-[#030605] flex flex-col font-sans selection:bg-white selection:text-black">
+      <ScrollProgressBar />
       
       {/* 1. Video Background: Full-screen background video playing with elegant dark vignette & softening overlays */}
       <div className="fixed inset-0 w-full h-full z-0 overflow-hidden select-none pointer-events-none">
@@ -281,124 +284,136 @@ export default function App() {
           <div className="max-w-7xl mx-auto space-y-12">
             
             {/* Sizing & Sourcing Section Titles */}
-            <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
-              <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">PM SURYA GHAR PORTAL</span>
-              <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">MNRE Approved Solar Grid Rates</h2>
-              <p className="text-xs text-[#A5B3B3] max-w-xl font-sans">
-                Below are the official approved rates with instant payouts under the <b>Government solar subsidy scheme</b>. Select a capacity to load our live interactive Smart Grid Sizer tool.
-              </p>
-            </div>
+            <ScrollReveal direction="up" duration={0.8}>
+              <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
+                <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">PM SURYA GHAR PORTAL</span>
+                <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">MNRE Approved Solar Grid Rates</h2>
+                <p className="text-xs text-[#A5B3B3] max-w-xl font-sans">
+                  Below are the official approved rates with instant payouts under the <b>Government solar subsidy scheme</b>. Select a capacity to load our live interactive Smart Grid Sizer tool.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Approved Brands list styled elegantly */}
-            <div className="liquid-glass border border-white/5 p-5 rounded-2xl">
-              <p className="text-[10px] font-mono tracking-widest text-[#A5B3B3] uppercase font-bold text-center mb-4">
-                We Deal in MNRE Approved Premium Tier-1 Brands:
-              </p>
-              <div className="flex flex-wrap items-center justify-around gap-y-4 gap-x-8 text-sm font-bold uppercase tracking-widest text-white/80">
-                <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" /> TATA POWER SOLAROOF
-                </span>
-                <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" /> ADANI SOLAR
-                </span>
-                <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" /> WAAREE SOLAR
-                </span>
-                <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" /> LUMINOUS SOLAR
-                </span>
-                <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" /> UTL SOLAR
-                </span>
+            <ScrollReveal direction="up" delay={0.15} duration={0.8}>
+              <div className="liquid-glass border border-white/5 p-5 rounded-2xl">
+                <p className="text-[10px] font-mono tracking-widest text-[#A5B3B3] uppercase font-bold text-center mb-4">
+                  We Deal in MNRE Approved Premium Tier-1 Brands:
+                </p>
+                <div className="flex flex-wrap items-center justify-around gap-y-4 gap-x-8 text-sm font-bold uppercase tracking-widest text-white/80">
+                  <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> TATA POWER SOLAROOF
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> ADANI SOLAR
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> WAAREE SOLAR
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> LUMINOUS SOLAR
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> UTL SOLAR
+                  </span>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Central Official PM Surya Ghar Subsidy Information Grid */}
-            <SubsidyMatrix 
-              onSelectKw={(kw, label) => {
-                setLastSelectedModel(`${kw}.0 kW System`);
-                setIsCalculatorOpen(true);
-              }}
-            />
+            <ScrollReveal direction="up" delay={0.3} duration={0.8}>
+              <SubsidyMatrix 
+                onSelectKw={(kw, label) => {
+                  setLastSelectedModel(`${kw}.0 kW System`);
+                  setIsCalculatorOpen(true);
+                }}
+              />
+            </ScrollReveal>
 
             {/* Quick action grid cards representing custom proposals */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               
               {/* Proposal 1: Dynamic Calculation Trigger */}
-              <div 
-                onClick={() => setIsCalculatorOpen(true)}
-                className="liquid-glass border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-400/30 transition-all cursor-pointer group hover:scale-[1.01]"
-              >
-                <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                    <Sliders className="w-5 h-5 animate-pulse" />
+              <ScrollReveal direction="up" delay={0.1} duration={0.7} className="flex flex-col h-full">
+                <div 
+                  onClick={() => setIsCalculatorOpen(true)}
+                  className="liquid-glass border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-400/30 transition-all cursor-pointer group hover:scale-[1.01] h-full"
+                >
+                  <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                      <Sliders className="w-5 h-5 animate-pulse" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-bold text-lg text-white">Interactive Sizer Tool</h4>
+                      <p className="font-mono text-[9px] text-emerald-400 uppercase tracking-wider mt-0.5">ESTIMATE PAYBACK & SUBSIDIES</p>
+                    </div>
+                    <p className="text-xs text-white/60 leading-relaxed font-sans">
+                      Instantly load our visual sizer. Tap through presets from 1 kW up to 6 kW, review net payers amount (such as the exclusive 3 kW promotion of ₹1,21,000!) & lock your subsidy request.
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="font-display font-bold text-lg text-white">Interactive Sizer Tool</h4>
-                    <p className="font-mono text-[9px] text-emerald-400 uppercase tracking-wider mt-0.5">ESTIMATE PAYBACK & SUBSIDIES</p>
+                  <div className="mt-8 pt-4 border-t border-white/5 flex justify-between items-center text-xs text-emerald-400 font-bold group-hover:underline">
+                    <span>Open Interactive Rate Matrix</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p className="text-xs text-white/60 leading-relaxed font-sans">
-                    Instantly load our visual sizer. Tap through presets from 1 kW up to 6 kW, review net payers amount (such as the exclusive 3 kW promotion of ₹1,21,000!) & lock your subsidy request.
-                  </p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-white/5 flex justify-between items-center text-xs text-emerald-400 font-bold group-hover:underline">
-                  <span>Open Interactive Rate Matrix</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
+              </ScrollReveal>
 
               {/* Proposal 2: Hardware Line-up Drawer Trigger */}
-              <div 
-                onClick={() => setIsModelExplorerOpen(true)}
-                className="liquid-glass border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FFE63B]/20 transition-all cursor-pointer group hover:scale-[1.01]"
-              >
-                <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-400">
-                    <Zap className="w-5 h-5" />
+              <ScrollReveal direction="up" delay={0.2} duration={0.7} className="flex flex-col h-full">
+                <div 
+                  onClick={() => setIsModelExplorerOpen(true)}
+                  className="liquid-glass border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FFE63B]/20 transition-all cursor-pointer group hover:scale-[1.01] h-full"
+                >
+                  <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-400">
+                      <Zap className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-bold text-lg text-white">Panel Catalog</h4>
+                      <p className="font-mono text-[9px] text-[#FFE63B] uppercase tracking-wider mt-0.5">DISCOVER APPLICABLE HARDWARE</p>
+                    </div>
+                    <p className="text-xs text-white/60 leading-relaxed font-sans">
+                      Compare Monocrystalline and premium Double-sided Bifacial modules designed for extreme weather. All materials are approved under direct MNRE specifications.
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="font-display font-bold text-lg text-white">Panel Catalog</h4>
-                    <p className="font-mono text-[9px] text-[#FFE63B] uppercase tracking-wider mt-0.5">DISCOVER APPLICABLE HARDWARE</p>
+                  <div className="mt-8 pt-4 border-t border-white/5 flex justify-between items-center text-xs text-[#FFE63B] font-bold group-hover:underline">
+                    <span>Explore Brands Catalog</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p className="text-xs text-white/60 leading-relaxed font-sans">
-                    Compare Monocrystalline and premium Double-sided Bifacial modules designed for extreme weather. All materials are approved under direct MNRE specifications.
-                  </p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-white/5 flex justify-between items-center text-xs text-[#FFE63B] font-bold group-hover:underline">
-                  <span>Explore Brands Catalog</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
+              </ScrollReveal>
 
               {/* Proposal 3: Active selected summary or placeholder */}
-              <div className="liquid-glass border border-emerald-500/20 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-b from-emerald-500/5 to-transparent rounded-full blur-xl pointer-events-none" />
-                <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-400/10 flex items-center justify-center text-emerald-400">
-                    <Award className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-bold text-lg text-white">Aqua Direct Guarantee</h4>
-                    <p className="font-mono text-[9px] text-emerald-400 uppercase tracking-wider mt-0.5">SECURE PATNA DEALERSHIP</p>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs">
-                      <span className="text-white/60">Selected Capacity:</span>
-                      <span className="font-mono font-bold text-white text-[11px] bg-white/5 px-2 py-0.5 rounded-md">{lastSelectedModel || "3.0 kW Premium System"}</span>
+              <ScrollReveal direction="up" delay={0.3} duration={0.7} className="flex flex-col h-full">
+                <div className="liquid-glass border border-emerald-500/20 rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden h-full">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-b from-emerald-500/5 to-transparent rounded-full blur-xl pointer-events-none" />
+                  <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-400/10 flex items-center justify-center text-emerald-400">
+                      <Award className="w-5 h-5" />
                     </div>
-                    <div className="flex justify-between items-center text-xs">
-                      <span className="text-white/60">Performance Warranty:</span>
-                      <span className="font-mono font-bold text-emerald-400">25 Years Warranty</span>
+                    <div>
+                      <h4 className="font-display font-bold text-lg text-white">Aqua Direct Guarantee</h4>
+                      <p className="font-mono text-[9px] text-emerald-400 uppercase tracking-wider mt-0.5">SECURE PATNA DEALERSHIP</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-white/60">Selected Capacity:</span>
+                        <span className="font-mono font-bold text-white text-[11px] bg-white/5 px-2 py-0.5 rounded-md">{lastSelectedModel || "3.0 kW Premium System"}</span>
+                      </div>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className="text-white/60">Performance Warranty:</span>
+                        <span className="font-mono font-bold text-emerald-400">25 Years Warranty</span>
+                      </div>
                     </div>
                   </div>
+                  <button
+                    onClick={() => setIsCalculatorOpen(true)}
+                    className="mt-8 w-full bg-emerald-400 hover:bg-emerald-300 text-black py-2.5 rounded-xl text-xs font-bold font-display uppercase tracking-wider transition-colors cursor-pointer animate-pulse"
+                  >
+                    Configure system proposal
+                  </button>
                 </div>
-                <button
-                  onClick={() => setIsCalculatorOpen(true)}
-                  className="mt-8 w-full bg-emerald-400 hover:bg-emerald-300 text-black py-2.5 rounded-xl text-xs font-bold font-display uppercase tracking-wider transition-colors cursor-pointer"
-                >
-                  Configure system proposal
-                </button>
-              </div>
+              </ScrollReveal>
 
             </div>
 
@@ -410,19 +425,23 @@ export default function App() {
         <section id="specs" className="w-full px-6 md:px-12 lg:px-16 py-12 md:py-20 bg-[#050908]">
           <div className="max-w-7xl mx-auto space-y-10">
             {/* Title */}
-            <div className="space-y-2 border-l-2 border-sun-yellow pl-4">
-              <span className="font-mono text-xs text-sun-yellow uppercase tracking-widest font-black">SOLAR HELIOSTAT CONTROL DESK</span>
-              <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Interactive Architectural specs</h2>
-              <p className="text-xs text-white/50 max-w-xl">
-                Slide the Celestial lever to rotate the simulated sun. Match real daily sun hours to test output generation performance in active residential photovoltaic models.
-              </p>
-            </div>
+            <ScrollReveal direction="up" duration={0.8}>
+              <div className="space-y-2 border-l-2 border-sun-yellow pl-4">
+                <span className="font-mono text-xs text-sun-yellow uppercase tracking-widest font-black">SOLAR HELIOSTAT CONTROL DESK</span>
+                <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Interactive Architectural specs</h2>
+                <p className="text-xs text-white/50 max-w-xl">
+                  Slide the Celestial lever to rotate the simulated sun. Match real daily sun hours to test output generation performance in active residential photovoltaic models.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Immersive interactive Hotspot house display */}
-            <SpecsHotspots 
-              onDiscoverModelsClick={() => setIsModelExplorerOpen(true)} 
-              onTakeOrderClick={() => setIsCalculatorOpen(true)} 
-            />
+            <ScrollReveal direction="up" delay={0.2} duration={0.8}>
+              <SpecsHotspots 
+                onDiscoverModelsClick={() => setIsModelExplorerOpen(true)} 
+                onTakeOrderClick={() => setIsCalculatorOpen(true)} 
+              />
+            </ScrollReveal>
           </div>
         </section>
 
@@ -431,28 +450,30 @@ export default function App() {
         <section id="controls" className="w-full px-6 md:px-12 lg:px-16 py-12 md:py-20 bg-gradient-to-b from-[#050908] to-black">
           <div className="max-w-7xl mx-auto space-y-10">
             {/* Title */}
-            <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
-              <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">BATTERY & WEATHER LAB</span>
-              <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Smart Controller Diagnostics</h2>
-              <p className="text-xs text-white/50 max-w-xl">
-                Observe the live simulation. Adjust extreme weather profiles from standard to blizzards or class-5 gale storms, or simulate an electrical grid outage to test standby battery runtime.
-              </p>
-            </div>
+            <ScrollReveal direction="up" duration={0.8}>
+              <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
+                <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">BATTERY & WEATHER LAB</span>
+                <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Smart Controller Diagnostics</h2>
+                <p className="text-xs text-white/50 max-w-xl">
+                  Observe the live simulation. Adjust extreme weather profiles from standard to blizzards or class-5 gale storms, or simulate an electrical grid outage to test standby battery runtime.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Two Column Grid containing Battery and Weather Widgets */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
               
               {/* Battery Card Component with customizable Outage Simulator */}
-              <div className="space-y-3">
+              <ScrollReveal direction="left" delay={0.1} duration={0.8} className="space-y-3">
                 <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-wider block font-bold">15.4 KWH ENERGY ARCHITECTURE</span>
                 <BatteryCard />
-              </div>
+              </ScrollReveal>
 
               {/* Weather resistant simulator shell */}
-              <div className="space-y-3">
+              <ScrollReveal direction="right" delay={0.2} duration={0.8} className="space-y-3">
                 <span className="font-mono text-[10px] text-sky-400 uppercase tracking-wider block font-bold">WEATHERPROOF INTEGRITY SHELL</span>
                 <WeatherCard />
-              </div>
+              </ScrollReveal>
 
             </div>
           </div>
@@ -463,23 +484,27 @@ export default function App() {
         <section id="testimonials" className="w-full px-6 md:px-12 lg:px-16 py-12 md:py-20 bg-black">
           <div className="max-w-7xl mx-auto space-y-12">
             {/* Title */}
-            <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
-              <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">VERIFIED ROOFTOP PORTFOLIO (सफल सोलर प्रोजेक्ट्स)</span>
-              <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Real Bill Reductions & Case Studies in Bihar</h2>
-              <p className="text-xs text-white/50 max-w-xl">
-                See detailed before vs. after electricity bill savings, net metering exports, and system capacities installed in Patna neighborhoods by New Aqua Home Appliances.
-              </p>
-            </div>
+            <ScrollReveal direction="up" duration={0.8}>
+              <div className="space-y-2 border-l-2 border-emerald-400 pl-4">
+                <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">VERIFIED ROOFTOP PORTFOLIO (सफल सोलर प्रोजेक्ट्स)</span>
+                <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Real Bill Reductions & Case Studies in Bihar</h2>
+                <p className="text-xs text-white/50 max-w-xl">
+                  See detailed before vs. after electricity bill savings, net metering exports, and system capacities installed in Patna neighborhoods by New Aqua Home Appliances.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Review component */}
-            <ReviewCard />
+            <ScrollReveal direction="up" delay={0.2} duration={0.8}>
+              <ReviewCard />
+            </ScrollReveal>
           </div>
         </section>
 
 
         {/* --- FOOTER REGISTRY --- */}
-        <footer className="w-full px-6 md:px-12 lg:px-16 py-12 border-t border-white/5 bg-black/60 relative z-10 text-xs text-white/50">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <footer className="w-full px-6 md:px-12 lg:px-16 pt-12 pb-36 md:pb-24 border-t border-white/5 bg-black/60 relative z-10 text-xs text-white/50">
+          <div className="max-w-7xl mx-auto md:pr-80 lg:pr-96 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             
             <div className="space-y-2">
               <div className="flex items-center gap-3">
@@ -510,37 +535,45 @@ export default function App() {
               </div>
             </div>
             
-            <div className="flex md:justify-end gap-6 font-mono text-[10px] uppercase tracking-wider">
+            <div className="flex justify-start md:justify-end gap-6 font-mono text-[10px] uppercase tracking-wider">
               <a href="#proposals" className="hover:text-white transition-colors">Subsidy Rates</a>
               <a href="#specs" className="hover:text-white transition-colors">Technology Specs</a>
               <a href="#controls" className="hover:text-white transition-colors font-semibold">Diagnostics</a>
             </div>
           </div>
           
-          <div className="max-w-7xl mx-auto pt-6 mt-6 border-t border-white/5 text-center text-[10px] text-white/30">
-            Approved Govt. of India • Ministry of New and Renewable Energy (MNRE) Dealer ID • New Aqua Home Appliances © 2026 • {" "}
-            <button 
-              onClick={() => setIsCreditsOpen(true)}
-              className="text-emerald-400 font-bold hover:text-emerald-300 hover:underline cursor-pointer bg-transparent border-none p-0 inline-flex items-center gap-1 font-mono transition-colors"
-              title="View Verified Developer Credentials"
-              id="view-developer-credits"
-            >
-              Designed & Developed by Krishna Kant
-            </button>
+          <div className="max-w-7xl mx-auto md:pr-80 lg:pr-96 pt-6 mt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-white/40">
+            <span className="text-center sm:text-left leading-relaxed">
+              Approved Govt. of India • Ministry of New and Renewable Energy (MNRE) Dealer ID • New Aqua Home Appliances © 2026
+            </span>
+            <div className="bg-emerald-500/5 border border-emerald-500/15 rounded-full px-4 py-1.5 flex items-center justify-center shrink-0">
+              <button 
+                onClick={() => setIsCreditsOpen(true)}
+                className="text-emerald-400 font-bold hover:text-emerald-300 hover:underline cursor-pointer bg-transparent border-none p-0 inline-flex items-center gap-1.5 font-mono transition-all text-xs"
+                title="View Verified Developer Credentials"
+                id="view-developer-credits"
+              >
+                Designed & Developed by Krishna Kant
+              </button>
+            </div>
           </div>
         </footer>
 
       </div>
 
-      {/* --- PERSISTENT FLOATING COMMUNICATION ACTION DOCK (Responsive Corner Action panel) --- */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2.5 items-end max-w-[210px] sm:max-w-[250px]">
+      {/* --- PERSISTENT FLOATING COMMUNICATION ACTION DOCK (Responsive Corner Action panel for Desktop only) --- */}
+      <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col gap-2.5 items-end max-w-[210px] sm:max-w-[250px] animate-fade-in">
         
         {/* PM Modi Floating Card, placed directly ABOVE the chat and call triggers - Compact design */}
         <div className="relative group shrink-0 select-none w-full max-w-[170px] sm:max-w-[195px] transition-all">
           {/* Subtle gold/emerald gradient glow behind the photo */}
           <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 via-[#FFE63B] to-emerald-400 rounded-2xl blur opacity-25 group-hover:opacity-60 transition duration-300" />
           
-          <div className="relative bg-[#040806]/98 border border-emerald-500/25 rounded-2xl p-1.5 shadow-2xl overflow-hidden flex items-center gap-2 transition-colors group-hover:border-emerald-400/40">
+          <div 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="relative bg-[#040806]/98 border border-emerald-500/25 rounded-2xl p-1.5 shadow-2xl overflow-hidden flex items-center gap-2 transition-transform active:scale-[0.98] cursor-pointer group-hover:border-emerald-400/40"
+            title="Go to start of website"
+          >
             <img 
               src="https://res.cloudinary.com/dfvfphe5z/image/upload/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
               alt="PM Narendra Modi - Surya Ghar Yojana" 
@@ -559,38 +592,85 @@ export default function App() {
           </div>
         </div>
 
-        {/* Floating Call Back Sticky Card trigger */}
-        <div className="liquid-glass border border-emerald-400/25 bg-[#090e0c]/95 rounded-2xl p-2.5 shadow-2lg flex items-center justify-between gap-3 select-none hover:border-emerald-400/45 transition-all group shrink-0 w-full">
+        {/* Floating Call Back Sticky Card trigger - whole tab clickable */}
+        <div 
+          onClick={() => setIsCallbackOpen(true)}
+          className="liquid-glass border border-emerald-400/25 bg-[#090e0c]/95 rounded-2xl p-2.5 shadow-2lg flex items-center justify-between gap-3 select-none hover:border-emerald-400/45 transition-all group shrink-0 w-full hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+          title="Request Instant Callback"
+        >
           <div className="font-sans pr-0.5">
             <span className="text-[8px] uppercase tracking-wider font-mono text-[#A2B6A2] block font-bold leading-none mb-0.5">PATNA HELPLINE</span>
             <span className="text-[11px] font-semibold text-white group-hover:text-emerald-400 transition-colors">Dial: +91 {PRIMARY_PHONE}</span>
           </div>
-          <button
-            onClick={() => setIsCallbackOpen(true)}
-            className="w-8 h-8 rounded-xl bg-emerald-400 text-black flex items-center justify-center hover:bg-emerald-300 transition-all font-bold cursor-pointer shadow-md shadow-emerald-400/10 hover:scale-105 active:scale-95 shrink-0"
-            title="Request Instant Callback"
+          <div
+            className="w-8 h-8 rounded-xl bg-emerald-400 text-black flex items-center justify-center group-hover:bg-emerald-300 transition-all font-bold shadow-md shadow-emerald-400/10 scale-100 group-hover:scale-105 active:scale-95 shrink-0"
           >
             <PhoneCall className="w-3.5 h-3.5 animate-bounce" />
-          </button>
+          </div>
         </div>
 
-        {/* Floating WhatsApp Sticky Card trigger */}
-        <div className="liquid-glass border border-[#25D366]/25 bg-[#040907]/95 rounded-2xl p-2.5 shadow-2lg flex items-center justify-between gap-3 select-none hover:border-[#25D366]/50 transition-all group shrink-0 w-full">
+        {/* Floating WhatsApp Sticky Card trigger - whole tab clickable */}
+        <a 
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="liquid-glass border border-[#25D366]/25 bg-[#040907]/95 rounded-2xl p-2.5 shadow-2lg flex items-center justify-between gap-3 select-none hover:border-[#25D366]/50 transition-all group shrink-0 w-full hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+          title="Chat via WhatsApp"
+        >
           <div className="font-sans pr-0.5">
             <span className="text-[8px] uppercase tracking-wider font-mono text-[#A2B6A2] block font-bold leading-none mb-0.5">WHATSAPP ENQUIRY</span>
             <span className="text-[11px] font-semibold text-white group-hover:text-[#25D366] transition-colors">Chat Instantly</span>
           </div>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-8 h-8 rounded-xl bg-[#25D366] text-black flex items-center justify-center hover:bg-[#20ba5a] transition-all font-bold cursor-pointer shadow-md shadow-green-400/10 hover:scale-105 active:scale-95 shrink-0"
-            title="Chat via WhatsApp"
+          <div
+            className="w-8 h-8 rounded-xl bg-[#25D366] text-black flex items-center justify-center group-hover:bg-[#20ba5a] transition-all font-bold shadow-md shadow-green-400/10 scale-100 group-hover:scale-105 active:scale-95 shrink-0"
           >
             <MessageCircle className="w-3.5 h-3.5" />
-          </a>
+          </div>
+        </a>
+
+      </div>
+
+      {/* --- PERSISTENT STICKY ACTION TRAY (For Mobile viewports < md to avoid overlapping content) --- */}
+      <div className="fixed bottom-3 left-3 right-3 z-50 md:hidden flex flex-row items-center gap-2 p-1.5 rounded-2xl bg-[#040907]/95 border border-white/10 shadow-2xl backdrop-blur-md">
+        
+        {/* PM Modi Quick Scroll Tag */}
+        <div 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-1.5 cursor-pointer shrink-0 border border-white/5 bg-white/5 rounded-xl p-1 pr-2 hover:bg-white/10 active:scale-95 transition-all"
+          title="Go to start of website"
+        >
+          <img 
+            src="https://res.cloudinary.com/dfvfphe5z/image/upload/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
+            alt="PM Modi" 
+            className="w-7 h-7 object-cover rounded-lg border border-white/10"
+          />
+          <div className="leading-none">
+            <span className="text-[6.5px] font-mono text-[#FFE63B] font-black uppercase block">Surya Ghar</span>
+            <span className="text-[9px] font-bold text-white tracking-tight">Yojana</span>
+          </div>
         </div>
 
+        {/* Callback Helpline target */}
+        <button 
+          onClick={() => setIsCallbackOpen(true)}
+          className="flex-1 flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 active:scale-95 transition-all text-[10px] font-bold"
+          title="Request Callback"
+        >
+          <PhoneCall className="w-3 h-3 text-emerald-400 animate-pulse" />
+          <span>Call Helpline</span>
+        </button>
+
+        {/* WhatsApp Chat target */}
+        <a 
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2 px-1 rounded-xl bg-[#25D366] text-black hover:bg-[#20ba5a] active:scale-95 transition-all text-[10px] font-bold shadow-md shadow-green-400/10"
+          title="Chat on WhatsApp"
+        >
+          <MessageCircle className="w-3.5 h-3.5 fill-black" />
+          <span>WhatsApp Chat</span>
+        </a>
       </div>
 
       {/* --- FLOATING OVERLAY MODALS & DRAWERS --- */}
