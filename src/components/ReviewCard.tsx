@@ -125,7 +125,7 @@ export default function ReviewCard() {
     if (!customerName || !customerPhone) return;
 
     // Build perfect WhatsApp lead redirect
-    const waText = `Hi New Aqua Home Appliances! I would like to book a PM Surya Ghar Solar site audit:
+    const waText = `Hi Ahaquatic Solar! I would like to book a PM Surya Ghar Solar site audit:
 - Name: ${customerName}
 - Contact No: ${customerPhone}
 - Site Locality: ${customerArea}
@@ -349,7 +349,7 @@ Please contact me for structural terrace audit layout scheduling!`;
               </span>
               <h4 className="text-lg font-extrabold text-white">Book Free Site Audit</h4>
               <p className="text-xs text-white/50 leading-relaxed font-sans">
-                Want zero electricity bills at your home? Enter details below to schedule an official PM Surya Ghar design consultation with New Aqua Home Appliances.
+                Want zero electricity bills at your home? Enter details below to schedule an official PM Surya Ghar design consultation with Ahaquatic Solar.
               </p>
             </div>
 
@@ -455,7 +455,7 @@ Please contact me for structural terrace audit layout scheduling!`;
 
             <div className="pt-2 border-t border-white/5 text-[10px] text-white/40 leading-relaxed font-mono text-center flex justify-center items-center gap-1.5 relative z-10">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>MNRE Approved Vendor: New Aqua Home Appliances</span>
+              <span>MNRE Approved Vendor: Ahaquatic Solar</span>
             </div>
 
           </div>

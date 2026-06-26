@@ -128,7 +128,7 @@ export default function SubsidyMatrix({ onSelectKw }: SubsidyMatrixProps) {
     onSelectKw(plan.kw, `${plan.kw} kW PM Surya Ghar Solar System`);
     
     // Auto WhatsApp redirect with structured text
-    const textStr = `Hi New Aqua Home Appliances! I am contacting you looking at your official PM Surya Ghar rate table. Interested in booking a ${plan.kw} kW plant with:
+    const textStr = `Hi Ahaquatic Solar! I am contacting you looking at your official PM Surya Ghar rate table. Interested in booking a ${plan.kw} kW plant with:
 - Market Price: ₹${plan.price.toLocaleString()}
 - Govt Subsidy Limit: ₹${plan.subsidy.toLocaleString()}
 - Final Net Amount Payable: ₹${plan.totalAmt.toLocaleString()}
@@ -165,7 +165,7 @@ export default function SubsidyMatrix({ onSelectKw }: SubsidyMatrixProps) {
           <div className="bg-emerald-500/10 border border-emerald-400/20 rounded-full px-4 py-1 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
             <span className="text-[10px] font-mono text-emerald-300 font-extrabold uppercase tracking-wider">
-              Bihar Installer ID: New Aqua Home Appliances
+              Bihar Installer ID: Ahaquatic Solar
             </span>
           </div>
         </div>
@@ -289,7 +289,7 @@ export default function SubsidyMatrix({ onSelectKw }: SubsidyMatrixProps) {
               <div className="flex items-center gap-2">
                 <span className="bg-emerald-400 text-black px-1.5 py-0.5 rounded text-[9px] font-mono font-extrabold uppercase">MNRE DEALER</span>
                 <p className="text-[#A5B3B3]">
-                  Authorized PM Surya Ghar agent: <strong>New Aqua Home Appliances, Patna</strong>
+                  Authorized PM Surya Ghar agent: <strong>Ahaquatic Solar, Patna</strong>
                 </p>
               </div>
               <p className="text-[10px] font-mono text-white/50 flex items-center gap-1">

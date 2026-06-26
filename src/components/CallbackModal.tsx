@@ -217,13 +217,13 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
                 <div>
                   <h4 className="font-display font-extrabold text-white text-md">Request Logged Successfully</h4>
                   <p className="text-xs text-white/50 max-w-xs mx-auto mt-2 leading-relaxed font-sans">
-                    Thank you <strong>{name}</strong>. An advisor from <strong>New Aqua Home Appliances</strong> will reach you on <strong>+91 {phone}</strong> shortly.
+                    Thank you <strong>{name}</strong>. An advisor from <strong>Ahaquatic Solar</strong> will reach you on <strong>+91 {phone}</strong> shortly.
                   </p>
                 </div>
                 
                 <div className="flex gap-2 justify-center">
                   <a
-                    href={`https://wa.me/919386945647?text=Hi%20New%20Aqua%20Home%20Appliances!%20My%20name%20is%20${encodeURIComponent(name)}.%20Please%20verify%20my%20solar%20rooftop%20subsidy.`}
+                    href={`https://wa.me/919386945647?text=Hi%20Ahaquatic%20Solar!%20My%20name%20is%20${encodeURIComponent(name)}.%20Please%20verify%20my%20solar%20rooftop%20subsidy.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#25D366] text-black text-xs font-bold py-2.5 px-5 rounded-lg flex items-center gap-1.5 transition-all"
@@ -242,7 +242,7 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
 
             {/* Note */}
             <div className="relative z-10 mt-5 pt-3.5 border-t border-white/5 text-center text-[10px] text-white/40 flex items-center justify-center gap-1.5">
-              <span>Secure connection registered with New Aqua Cabinet</span>
+              <span>Secure connection registered with Ahaquatic Cabinet</span>
             </div>
 
           </motion.div>

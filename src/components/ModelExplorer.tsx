@@ -116,7 +116,7 @@ export default function ModelExplorer({ isOpen, onClose, onTakeOrder }: ModelExp
     onTakeOrder(`${activeBrand.name} - ${activeTier.kw}kW System`);
     
     // Auto-redirect to WhatsApp check
-    const textStr = `Hi New Aqua Home Appliances! I am looking to install a ${activeTier.kw} kW solar plant using MNRE Approved ${activeBrand.name}. Proposal price: ₹${activeTier.price.toLocaleString()} with ₹${activeTier.subsidy.toLocaleString()} Govt. Subsidy. Final Payable Amount: ₹${activeTier.totalAmt.toLocaleString()}. Please arrange a home site inspection.`;
+    const textStr = `Hi Ahaquatic Solar! I am looking to install a ${activeTier.kw} kW solar plant using MNRE Approved ${activeBrand.name}. Proposal price: ₹${activeTier.price.toLocaleString()} with ₹${activeTier.subsidy.toLocaleString()} Govt. Subsidy. Final Payable Amount: ₹${activeTier.totalAmt.toLocaleString()}. Please arrange a home site inspection.`;
     const url = `https://wa.me/919386945647?text=${encodeURIComponent(textStr)}`;
     window.open(url, '_blank', 'noreferrer,noopener');
   };
@@ -285,7 +285,7 @@ export default function ModelExplorer({ isOpen, onClose, onTakeOrder }: ModelExp
                           </span>
                         </div>
                         <div>
-                          <span className="block text-[8px] font-mono text-amber-300 uppercase">AQUA PROMO</span>
+                          <span className="block text-[8px] font-mono text-amber-300 uppercase">AHAQUATIC PROMO</span>
                           <span className="font-bold text-amber-300 text-[13px]">- ₹{activeTier.bonusDiscount.toLocaleString()}</span>
                         </div>
                       </>

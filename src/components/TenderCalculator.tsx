@@ -58,7 +58,7 @@ export default function TenderCalculator({ isOpen, onClose }: TenderCalculatorPr
   };
 
   const getWhatsAppURL = (tier: PresetSolarTier, brand: string) => {
-    const textStr = `Hi New Aqua Home Appliances! I am interested in installing your MNRE approved ${tier.kw} kW Solar Rooftop power system (${brand}) under the PM Surya Ghar government subsidy scheme at Patna. Please share official quotes for System Price: ₹${tier.systemPrice.toLocaleString()} - Subsidy: ₹${tier.subsidy.toLocaleString()} = Net Payout: ₹${tier.totalPayOnly.toLocaleString()}.`;
+    const textStr = `Hi Ahaquatic Solar! I am interested in installing your MNRE approved ${tier.kw} kW Solar Rooftop power system (${brand}) under the PM Surya Ghar government subsidy scheme at Patna. Please share official quotes for System Price: ₹${tier.systemPrice.toLocaleString()} - Subsidy: ₹${tier.subsidy.toLocaleString()} = Net Payout: ₹${tier.totalPayOnly.toLocaleString()}.`;
     return `https://wa.me/91${PRIMARY_PHONE}?text=${encodeURIComponent(textStr)}`;
   };
 
@@ -104,7 +104,7 @@ export default function TenderCalculator({ isOpen, onClose }: TenderCalculatorPr
                     </span>
                   </div>
                   <p className="font-sans text-[11px] text-white/60 mt-0.5">
-                    New Aqua Home Appliances • Sabajpura More, Phulwari Sharif, Patna
+                    Ahaquatic Solar • Sabajpura More, Phulwari Sharif, Patna
                   </p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ export default function TenderCalculator({ isOpen, onClose }: TenderCalculatorPr
                         ₹{totalBenefit.toLocaleString()}
                       </p>
                       <span className="text-[9px] text-amber-300/60 block mt-0.5">
-                        {activeTier.addonDiscount ? `Incl. ₹${activeTier.addonDiscount.toLocaleString()} Aqua Discount!` : 'Subsidy Applied'}
+                        {activeTier.addonDiscount ? `Incl. ₹${activeTier.addonDiscount.toLocaleString()} Ahaquatic Discount!` : 'Subsidy Applied'}
                       </span>
                     </div>
                   </div>
@@ -387,7 +387,7 @@ export default function TenderCalculator({ isOpen, onClose }: TenderCalculatorPr
             <div className="relative z-10 mt-5 pt-3.5 border-t border-white/5 text-center text-[10px] text-white/40 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
               <span>* Subsidy Subject to MNRE & DISCOM approval limits.</span>
               <span className="hidden sm:inline text-white/10">•</span>
-              <span>All rights reserved by New Aqua Home Appliances.</span>
+              <span>All rights reserved by Ahaquatic Solar.</span>
             </div>
 
           </motion.div>

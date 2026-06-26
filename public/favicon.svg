@@ -1,15 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34D399" /> <!-- emerald-400 -->
-      <stop offset="100%" stop-color="#FBBF24" /> <!-- amber-400 -->
+    <!-- Blue gradient for outer drop and splashes -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4F5" />
+      <stop offset="100%" stop-color="#0054A6" />
+    </linearGradient>
+    <!-- Green gradient for inner leaf-drop -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8DC63F" />
+      <stop offset="100%" stop-color="#009245" />
+    </linearGradient>
+    <!-- Multi-stop gradient for bottom ripple -->
+    <linearGradient id="rippleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#009245" />
+      <stop offset="50%" stop-color="#00B4F5" />
+      <stop offset="100%" stop-color="#0054A6" />
     </linearGradient>
   </defs>
-  <circle cx="50" cy="50" r="46" fill="url(#grad)" />
-  <circle cx="50" cy="50" r="28" fill="#030605" />
-  <!-- Solar panels lines -->
-  <path d="M35 50 L65 50 M50 35 L50 65" stroke="#34D399" stroke-width="3" stroke-linecap="round" />
-  <path d="M39 39 L61 61 M61 39 L39 61" stroke="#34D399" stroke-width="2" stroke-linecap="round" />
-  <!-- Sun in center -->
-  <circle cx="50" cy="50" r="14" fill="#FFE63B" />
+
+  <!-- Left splashes / droplets -->
+  <!-- Upper splash -->
+  <path d="M 23,38 C 21,38 18,40 19,43 C 20,46 24,45 25,43 C 26,41 25,38 23,38 Z" fill="url(#blueGrad)" />
+  <!-- Middle splash -->
+  <path d="M 16,46 C 14,46 12,48 13,51 C 14,54 18,53 19,51 C 20,49 18,46 16,46 Z" fill="url(#blueGrad)" />
+  <!-- Lower splash -->
+  <path d="M 22,54 C 20,54 18,56 19,59 C 20,62 24,61 25,59 C 26,57 24,54 22,54 Z" fill="url(#blueGrad)" />
+
+  <!-- Circular ripple/wave base -->
+  <path d="M 8,72 C 12,85 88,85 92,72 C 80,78 20,78 8,72 Z" fill="url(#rippleGrad)" />
+
+  <!-- Main Water Drop - Blue Outer Shell -->
+  <path d="M 45,13 C 35,28 22,46 27,66 C 31,80 50,81 53,66 C 53,53 48,39 45,13 Z" fill="url(#blueGrad)" />
+
+  <!-- Main Water Drop - Green Inner Leaf -->
+  <path d="M 46,26 C 53,35 62,49 57,63 C 54,72 42,72 39,63 C 38,53 42,39 46,26 Z" fill="url(#greenGrad)" />
+
+  <!-- Bright white sparkle on the top-left of the blue shell -->
+  <path d="M 33,30 Q 33,35 28,35 Q 33,35 33,40 Q 33,35 38,35 Q 33,35 33,30 Z" fill="#FFFFFF" />
 </svg>

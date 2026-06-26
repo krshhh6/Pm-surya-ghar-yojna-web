@@ -23,7 +23,7 @@ export default function App() {
 
   const PRIMARY_PHONE = "9386945647";
   const SECONDARY_PHONES = ["9304941212", "9534331212", "9334030230"];
-  const WHATSAPP_URL = `https://wa.me/919386945647?text=Hi%20New%20Aqua%20Home%20Appliance!%20I%20am%20interested%20in%20your%20solar%20panel%20rooftop%20schemes%20under%20the%20PM%20Surya%20Ghar%20government%20subsidy.%20Could%20you%20please%20share%20pricing%20details?`;
+  const WHATSAPP_URL = `https://wa.me/919386945647?text=Hi%20Ahaquatic!%20I%20am%20interested%20in%20your%20solar%20panel%20rooftop%20schemes%20under%20the%20PM%20Surya%20Ghar%20government%20subsidy.%20Could%20you%20please%20share%20pricing%20details?`;
 
   const handleStartChat = () => {
     // Open the calculator proposal directly as our custom chat replacement
@@ -86,9 +86,36 @@ export default function App() {
           {/* 2. Navbar with horizontal page padding: px-4 md:px-12 lg:px-16 with pt-4/pt-6 top padding */}
           <header className="relative z-10 w-full px-4 md:px-12 lg:px-16 pt-4 md:pt-6">
             <nav className="liquid-glass rounded-xl px-4 py-2.5 flex items-center justify-between">
-              {/* Left: Logo with Custom Brand */}
-              <div className="text-xl md:text-2xl font-bold tracking-tight cursor-pointer flex items-center gap-2">
-                <span className="text-emerald-400">NEW AQUA</span>
+              {/* Left: Logo with Custom Brand - Only logo image, text removed */}
+              <div 
+                className="cursor-pointer flex items-center gap-2" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                id="logo-container"
+              >
+                <svg className="w-8 h-8 md:w-9.5 md:h-9.5" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="navBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#00B4F5" />
+                      <stop offset="100%" stop-color="#0054A6" />
+                    </linearGradient>
+                    <linearGradient id="navGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8DC63F" />
+                      <stop offset="100%" stop-color="#009245" />
+                    </linearGradient>
+                    <linearGradient id="navRippleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#009245" />
+                      <stop offset="50%" stop-color="#00B4F5" />
+                      <stop offset="100%" stop-color="#0054A6" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M 23,38 C 21,38 18,40 19,43 C 20,46 24,45 25,43 C 26,41 25,38 23,38 Z" fill="url(#navBlueGrad)" />
+                  <path d="M 16,46 C 14,46 12,48 13,51 C 14,54 18,53 19,51 C 20,49 18,46 16,46 Z" fill="url(#navBlueGrad)" />
+                  <path d="M 22,54 C 20,54 18,56 19,59 C 20,62 24,61 25,59 C 26,57 24,54 22,54 Z" fill="url(#navBlueGrad)" />
+                  <path d="M 8,72 C 12,85 88,85 92,72 C 80,78 20,78 8,72 Z" fill="url(#navRippleGrad)" />
+                  <path d="M 45,13 C 35,28 22,46 27,66 C 31,80 50,81 53,66 C 53,53 48,39 45,13 Z" fill="url(#navBlueGrad)" />
+                  <path d="M 46,26 C 53,35 62,49 57,63 C 54,72 42,72 39,63 C 38,53 42,39 46,26 Z" fill="url(#navGreenGrad)" />
+                  <path d="M 33,30 Q 33,35 28,35 Q 33,35 33,40 Q 33,35 38,35 Q 33,35 33,30 Z" fill="#FFFFFF" />
+                </svg>
                 <span className="text-[9px] uppercase font-mono tracking-widest text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">
                   MNRE APPROVED
                 </span>
@@ -216,7 +243,7 @@ export default function App() {
                 {/* Re-located description and map coordinates link right below the Explore Brands CTA action row */}
                 <FadeIn delay={1300} duration={1000} className="w-full mt-6">
                   <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-normal border-l-2 border-emerald-500/40 pl-3.5">
-                    Get up to <b>300 units of free electricity</b> per month! Government solar subsidy scheme to provide free electricity. Managed officially by <b>New Aqua Home Appliances</b> in Patna. Install premium tier-1 systems with 25 years warranty.
+                    Get up to <b>300 units of free electricity</b> per month! Government solar subsidy scheme to provide free electricity. Managed officially by <b>Ahaquatic Solar</b> in Patna. Install premium tier-1 systems with 25 years warranty.
                   </p>
                   
                   <a 
@@ -241,7 +268,7 @@ export default function App() {
                       <div className="absolute top-0 right-0 w-3 h-3 bg-emerald-400 rounded-full animate-ping m-3" />
                       <p className="text-[9px] uppercase font-mono tracking-widest text-[#FFE63B] font-extrabold mb-0.5">UTILITY CONTRACTOR</p>
                       <p className="text-sm font-extrabold tracking-wide text-white mb-2">
-                        New Aqua Home Appliances
+                        Ahaquatic Solar
                       </p>
                       
                       {/* Integrated shop directions link directly on the partner badge */}
@@ -392,7 +419,7 @@ export default function App() {
                       <Award className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-lg text-white">Aqua Direct Guarantee</h4>
+                      <h4 className="font-display font-bold text-lg text-white">Ahaquatic Guarantee</h4>
                       <p className="font-mono text-[9px] text-emerald-400 uppercase tracking-wider mt-0.5">SECURE PATNA DEALERSHIP</p>
                     </div>
                     <div className="space-y-2">
@@ -489,7 +516,7 @@ export default function App() {
                 <span className="font-mono text-xs text-emerald-400 uppercase tracking-widest font-black">VERIFIED ROOFTOP PORTFOLIO (सफल सोलर प्रोजेक्ट्स)</span>
                 <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">Real Bill Reductions & Case Studies in Bihar</h2>
                 <p className="text-xs text-white/50 max-w-xl">
-                  See detailed before vs. after electricity bill savings, net metering exports, and system capacities installed in Patna neighborhoods by New Aqua Home Appliances.
+                  See detailed before vs. after electricity bill savings, net metering exports, and system capacities installed in Patna neighborhoods by Ahaquatic Solar.
                 </p>
               </div>
             </ScrollReveal>
@@ -508,7 +535,7 @@ export default function App() {
             
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <p className="font-display font-black text-white text-sm tracking-widest uppercase">NEW AQUA SOLAR</p>
+                <p className="font-display font-black text-white text-sm tracking-widest uppercase">AHAQUATIC SOLAR</p>
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               </div>
               <p className="text-[10px] text-white/40 leading-relaxed font-sans">
@@ -544,7 +571,7 @@ export default function App() {
           
           <div className="max-w-7xl mx-auto md:pr-80 lg:pr-96 pt-6 mt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-white/40">
             <span className="text-center sm:text-left leading-relaxed">
-              Approved Govt. of India • Ministry of New and Renewable Energy (MNRE) Dealer ID • New Aqua Home Appliances © 2026
+              Approved Govt. of India • Ministry of New and Renewable Energy (MNRE) Dealer ID • Ahaquatic Solar © 2026
             </span>
             <div className="bg-emerald-500/5 border border-emerald-500/15 rounded-full px-4 py-1.5 flex items-center justify-center shrink-0">
               <button 
