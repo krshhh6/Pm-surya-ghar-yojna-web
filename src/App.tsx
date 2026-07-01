@@ -75,7 +75,7 @@ export default function App() {
               }}
             >
               <img 
-                src="https://res.cloudinary.com/dfvfphe5z/image/upload/a_hflip/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
                 alt="PM Narendra Modi Campaign Background"
                 className="w-full h-full object-cover object-top lg:object-center scale-[1.04] pointer-events-none opacity-[0.28] sm:opacity-[0.42] lg:opacity-[0.90] mix-blend-screen filter saturate-[1.12] brightness-[0.98] contrast-[1.4]"
                 referrerPolicy="no-referrer"
@@ -193,7 +193,7 @@ export default function App() {
                     <div className="relative shrink-0">
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FFE63B]/45 to-emerald-400/45 rounded-xl blur opacity-75 animate-pulse" />
                       <img 
-                        src="https://res.cloudinary.com/dfvfphe5z/image/upload/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
                         alt="PM Narendra Modi - National Solar Campaign" 
                         referrerPolicy="no-referrer"
                         className="relative w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl border border-white/10 select-none shadow-lg"
@@ -602,7 +602,7 @@ export default function App() {
             title="Go to start of website"
           >
             <img 
-              src="https://res.cloudinary.com/dfvfphe5z/image/upload/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
               alt="PM Narendra Modi - Surya Ghar Yojana" 
               referrerPolicy="no-referrer"
               className="w-10 h-10 sm:w-11 sm:h-11 object-cover rounded-xl border border-white/10 shrink-0 select-none pointer-events-none"
@@ -667,7 +667,7 @@ export default function App() {
           title="Go to start of website"
         >
           <img 
-            src="https://res.cloudinary.com/dfvfphe5z/image/upload/v1781368607/MODi_MODI_MODI_hwqbdg.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
             alt="PM Modi" 
             className="w-7 h-7 object-cover rounded-lg border border-white/10"
           />
