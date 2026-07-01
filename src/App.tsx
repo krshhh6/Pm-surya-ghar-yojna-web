@@ -45,7 +45,7 @@ export default function App() {
       {/* 1. Video Background: Full-screen background video playing with elegant dark vignette & softening overlays */}
       <div className="fixed inset-0 w-full h-full z-0 overflow-hidden select-none pointer-events-none">
         <video
-          src="https://res.cloudinary.com/dfvfphe5z/video/upload/v1781065312/0610_egvkyg.mp4"
+          src="https://ik.imagekit.io/4uwtveet8/0610.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop
