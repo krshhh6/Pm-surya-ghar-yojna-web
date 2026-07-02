@@ -77,7 +77,8 @@ export default function App() {
               <img 
                 src="./modi-cutout.png" 
                 alt="PM Narendra Modi Campaign Background"
-                className="w-full h-full object-cover sm:object-contain lg:object-cover object-bottom sm:object-bottom lg:object-center lg:object-right-bottom scale-100 lg:scale-[1.02] -scale-x-100 pointer-events-none drop-shadow-2xl"
+                className="w-full h-full object-cover sm:object-contain lg:object-cover object-bottom sm:object-bottom lg:object-center lg:object-right-bottom scale-100 lg:scale-[1.02] pointer-events-none drop-shadow-2xl"
+                style={{ transform: 'scaleX(-1)' }}
                 referrerPolicy="no-referrer"
               />
             </div>
