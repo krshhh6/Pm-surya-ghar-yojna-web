@@ -100,13 +100,15 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
                 {/* Direct Call badges */}
                 <div>
                   <label className="block text-[9px] uppercase tracking-wider text-emerald-400 font-mono font-bold mb-2">
-                    Click to Call Helpline Directly
+                    Connect on WhatsApp
                   </label>
                   <div className="grid grid-cols-2 gap-2">
                     {EMERGENCY_CHANNELS.map((ch) => (
                       <a
                         key={ch.num}
-                        href={`tel:+91${ch.num}`}
+                        href={`https://wa.me/91${ch.num}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`p-2 rounded-xl text-left border flex flex-col justify-center transition-all ${
                           ch.primary
                             ? 'bg-emerald-500/10 border-emerald-400/50 hover:border-emerald-400'
