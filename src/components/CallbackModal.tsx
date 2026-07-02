@@ -26,11 +26,16 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
     if (!name || !phone) return;
 
     setIsSubmitting(true);
-    // Simulate API registration delay
+    
+    const timeLabel = prefTime === 'immediate' ? 'Now (~15m)' : 'Today Evening';
+    const message = `*New Call Back Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Preferred Time:* ${timeLabel}\n\nPlease call me back regarding the PM Surya Ghar Solar Rooftop scheme.`;
+    const whatsappUrl = `https://wa.me/919386945647?text=${encodeURIComponent(message)}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1200);
+      window.open(whatsappUrl, '_blank');
+    }, 800);
   };
 
   const resetForm = () => {
