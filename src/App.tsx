@@ -75,9 +75,9 @@ export default function App() {
               }}
             >
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
+                src="./modi-cutout.png" 
                 alt="PM Narendra Modi Campaign Background"
-                className="w-full h-full object-cover object-top lg:object-center scale-[1.04] pointer-events-none opacity-[0.28] sm:opacity-[0.42] lg:opacity-[0.90] mix-blend-screen filter saturate-[1.12] brightness-[0.98] contrast-[1.4]"
+                className="w-full h-full object-cover sm:object-contain lg:object-cover object-bottom sm:object-bottom lg:object-center lg:object-right-bottom scale-100 lg:scale-[1.02] pointer-events-none drop-shadow-2xl"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -116,7 +116,10 @@ export default function App() {
                   <path d="M 46,26 C 53,35 62,49 57,63 C 54,72 42,72 39,63 C 38,53 42,39 46,26 Z" fill="url(#navGreenGrad)" />
                   <path d="M 33,30 Q 33,35 28,35 Q 33,35 33,40 Q 33,35 38,35 Q 33,35 33,30 Z" fill="#FFFFFF" />
                 </svg>
-                <span className="text-[9px] uppercase font-mono tracking-widest text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">
+                <span className="font-bold text-lg sm:text-xl tracking-tight leading-none flex items-center ml-1">
+                  <span className="text-emerald-400">NEW</span>&nbsp;<span className="text-cyan-400">AQUA</span>
+                </span>
+                <span className="text-[8px] sm:text-[9px] uppercase font-mono font-bold tracking-widest text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded-md border border-amber-400/20 ml-1">
                   MNRE APPROVED
                 </span>
               </div>
@@ -193,7 +196,7 @@ export default function App() {
                     <div className="relative shrink-0">
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FFE63B]/45 to-emerald-400/45 rounded-xl blur opacity-75 animate-pulse" />
                       <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
+                        src="./modi-cutout.png" 
                         alt="PM Narendra Modi - National Solar Campaign" 
                         referrerPolicy="no-referrer"
                         className="relative w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl border border-white/10 select-none shadow-lg"
@@ -602,7 +605,7 @@ export default function App() {
             title="Go to start of website"
           >
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
+              src="./modi-cutout.png" 
               alt="PM Narendra Modi - Surya Ghar Yojana" 
               referrerPolicy="no-referrer"
               className="w-10 h-10 sm:w-11 sm:h-11 object-cover rounded-xl border border-white/10 shrink-0 select-none pointer-events-none"
@@ -667,7 +670,7 @@ export default function App() {
           title="Go to start of website"
         >
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png" 
+            src="./modi-cutout.png" 
             alt="PM Modi" 
             className="w-7 h-7 object-cover rounded-lg border border-white/10"
           />
